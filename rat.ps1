@@ -52,7 +52,7 @@ foreach ($d in $all) { 
     $exec_cmd = $d
     $tmp=Invoke-Expression -Command $exec_cmd
     $exec_cmd += $tmp | Out-String
-    #$count=$exec_cmd.Length
+    $count=$exec_cmd.Length
     #echo $count
 
     [int]$i=0
