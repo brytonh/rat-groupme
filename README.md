@@ -12,7 +12,7 @@ This is strictly of proof of concept and learning project, so no persistence str
 app.py, runtime.txt, requirements.txt, Procfile, and commands.txt are all necessary on the 
 heroku app-side. 
 
-The rat.ps1 will need to be ran from the client.
+The rat.ps1 will need to be ran from the client. The rat.ps1 will run commands via a powershell session. Anything you can run in powershell, you can run remotely with this RAT. I've also added a screenshot and file upload function.
 
 ## Steps to Reproduce
 1. Setup a Python HerokuApp using the files I've provided. Heroku Git is a magical thing. 
