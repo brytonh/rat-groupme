@@ -18,7 +18,7 @@ Multiple commands are suppored between polling interval. Send the commands you w
 ## Steps to Reproduce
 1. Setup a Python HerokuApp using the files I've provided. Heroku Git is a magical thing. 
 2. Put the rat.ps1 on the machine you're testing as your client/target machine. As of right now,
-I have tested this on Win10. I will be rewriting the script for Powershell 2.0.
+I have tested this on PowerShell 5.1. I will be rewriting the script for Powershell 2.0.
 3. Make the necessary changes based on your personal API information.
 
 ### In rat.ps1: 
