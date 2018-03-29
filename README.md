@@ -10,7 +10,7 @@ commands, output is sent to the "attackers" in their set groupme chat.
 This is strictly of proof of concept and learning project, so no persistence strategies or task scheduling will be mentioned here. You're on your own.
 
 app.py, runtime.txt, requirements.txt, Procfile, and commands.txt are all necessary on the 
-herouo app-side. 
+heroku app-side. 
 
 The rat.ps1 will need to be ran from the client.
 
