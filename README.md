@@ -1,7 +1,7 @@
 # Rat-GroupME
 
-* For learning purposes only. I wanted to see how the GroupME API or similar chat-based framework would work as a RAT controller. This is not meant
-to be used maliciously.
+_For learning purposes only. I wanted to see how the GroupME API or similar chat-based framework would work as a RAT controller. This is not meant
+to be used maliciously._
 
 The implant is the rat.ps1 and is meant to be ran every X minutes, POSTing to the 
 heroku python app asking for what commands to be ran. After running these 
