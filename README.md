@@ -33,3 +33,7 @@ I have tested this on Win10. I will be rewriting the script for Powershell 2.0.
 You'll need to host your file somewhere like pastebin, termbin, or dropfile. 
 Ex. - cat file.txt | nc termbin.com 9999
 - Get the URL and use it to run your command in chat as such: upload URL OutFilePath
+
+_Please see screenshots folder if confused_
+
+Hope you enjoy, and don't hesitate to email me.
