@@ -14,7 +14,7 @@ function sendmsg() {
     Invoke-RestMethod -Method POST -Uri $Url -Body $Body
 }
 
-#send nudes
+#send screenshots
 function sendpics() {
     $Url = "https://image.groupme.com/pictures"
     $GM_TOKEN = "bf0c57c0007e0136a2db7fb5bd43c247"
