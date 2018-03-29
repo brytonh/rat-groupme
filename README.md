@@ -1,10 +1,20 @@
 # Rat-GroupME
 
-The implant is the rat.ps1 and will be ran every X minutes, POSTing to the 
+* For learning purposes only. I wanted to see how the GroupME API or similar chat-based framework would work as a RAT controller. This is not meant
+to be used maliciously. *
+
+The implant is the rat.ps1 and is meant to be ran every X minutes, POSTing to the 
 heroku python app asking for what commands to be ran. After running these 
-commands, output is sent to the attackers in their set groupme chat. 
+commands, output is sent to the "attackers" in their set groupme chat. 
+
+This is strictly of proof of concept and learning project, so no persistence strategies or task scheduling will be mentioned here. You're on your own.
 
 app.py, runtime.txt, requirements.txt, Procfile, and commands.txt are all necessary on the 
 herouo app-side. 
 
+The rat.ps1 will need to be ran from the client.
+
+1. Setup a Python HerokuApp using the files I've provided. Heroku Git is a magical thing. 
+2. Put the rat.ps1 on the machine you're testing as your client/target machine. As of right now,
+I have tested this on Win10. I will be rewriting the script for Powershell 2.0.
 
