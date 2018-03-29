@@ -25,4 +25,7 @@ I have tested this on Win10. I will be rewriting the script for Powershell 2.0.
 * Set GM_TOKEN on line 20
 * Provide your HerokuApp URL on line 36
  
+### In app.py
+* Set bot_id in send_message function
+* The conditions that mention the bot's name may need to be changed if your bot is named something other than 'victim'
 
