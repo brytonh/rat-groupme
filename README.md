@@ -13,7 +13,7 @@ app.py, runtime.txt, requirements.txt, Procfile, and commands.txt are all necess
 heroku app-side. 
 
 The rat.ps1 will need to be ran from the client. The rat.ps1 will run commands via a powershell session. Anything you can run in powershell, you can run remotely with this RAT. I've also added a screenshot and file upload function.
-Multiple commands are suppored between polling interval. Send the commands you wish to run when the client phones home next, and output will be sent to you when the client reaches out.
+Multiple commands are supported between polling intervals. Send the commands you wish to run when the client phones home next, and output will be sent to you when the client reaches out.
 
 ## Steps to Reproduce
 1. Setup a Python HerokuApp using the files I've provided. Heroku Git is a magical thing. 
