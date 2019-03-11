@@ -37,4 +37,4 @@ Ex. - cat file.txt | nc termbin.com 9999
 
 _Please see screenshots folder if confused_
 
-Hope you enjoy, and don't hesitate to email me.
+Hope you enjoy, and don't hesitate to email me. brytonjherdes@gmail.com
